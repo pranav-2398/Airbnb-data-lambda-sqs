@@ -13,7 +13,7 @@ logger.setLevel("INFO")
 def lambda_handler(event, context):
     # print('Event: ',event)
     # print('Context: ', context)
-    message = event[0]['message']
+    message = event[0]['body']
     s3_client = boto3.client('s3')
     s3_resource = boto3.resource('s3')
     today_date = str(date.today())
