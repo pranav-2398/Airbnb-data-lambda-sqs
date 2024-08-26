@@ -8,6 +8,7 @@ phases:
     runtime-versions:
       python: 3.11
     commands:
+      - mkdir buildfiles
       - echo "Installing dependencies for eventbridge lambda function..."
       - pip install -r ./eventbridge_lambda_s3/requirements.txt -t lib
   build:
